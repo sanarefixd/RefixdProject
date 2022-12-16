@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="alert('Resize')" onscroll="alert('Scroll')">       <!--  window events in body tag -->              <!-- Keyboard events in body or form tag -->
+    <!-- 
+    <input onchange="printMessage(event)" type="text" id="message" placeholder="Enter message" />
+    <div id="container">
+        <form onsubmit="handleSubmit(event)">
+            <h3>Sign Up form</h3>
+            <input onchange="printInConsole(event)" type="text" name="firstName" />
+            <input type="submit" />
+        </form>
+    </div>
+ -->
+
+ <script src="events.js"></script>
+
+ <form onsubmit="xsubmit()" onreset="xclear()">
+    <!-- 
+    Name <input type="text" id="name" onfocus="alert('Hey')" /> <br/> <br/>
+    Age <input type="text" id="age" onfocus="alert('Bye')"/> -->
+
+    Name <input type="text" id="name" onfocus="xfocus(this)" onblur="xblur(this)" onchange="xchange()" /> <br/> <br/>             <!-- Instead of this we can put as id or value but if its this it considers both value and id-->
+    Age <input type="text" id="age" onfocus="xfocus(this)" onblur="xblur(this)" /> <br/> <br/>                           <!-- onchange and onblur is quite similar, runs when looses the focus but onblur executes everytime, onchange only after changing-->
+
+    Selection <input type="text" onselect="xselect(this)" /> <br/> <br/> 
+    
+    <input type="submit" value="SEND">
+    <input type="reset" value="CLEAR">   <br/> <br/> 
+
+    <button onclick="alert('Clicked')">Click Me</button>
+
+    <p ondblclick="alert('Double Clicked')" oncontextmenu="alert('Right Clicked')">Click me too</p>
+
+    <!-- <p onmouseenter="alert('Mouse Entered')" onmouseout="alert('Mouse Out')">Mouse Events</p> -->
+<!-- 
+    <p onmouseup="alert('Mouse UP')">Mouse UP </p>
+
+    <p onmousedown="alert('Mouse Down')" >Mouse DOWN Events</p>
+
+    KEY EVENTS<input type="text" onkeypress="alert('Key Pressed')"  /> <br/> <br/>
+
+    <p>Window Events, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas suscipit numquam provident libero natus consequatur corporis est necessitatibus eveniet! Ullam pariatur obcaecati eius ipsum illo qui labore rem excepturi nesciunt! Minus iure iusto soluta, vitae id atque ut ea? Animi dolore neque architecto ipsa magni sint quos nemo dignissimos debitis ex, voluptatem delectus asperiores tempore deleniti praesentium. Inventore, nisi animi sapiente minus maxime, fugiat numquam nostrum accusamus labore aliquid mollitia rerum aut velit doloremque eaque natus, repellendus hic repudiandae totam omnis? Quidem voluptatibus in eos inventore possimus earum id architecto beatae quae, explicabo sunt ratione rem molestiae non reprehenderit, consectetur unde nostrum. Pariatur ullam voluptatem culpa asperiores animi illum sit rem error, nobis assumenda blanditiis sed, laborum laboriosam soluta fuga provident obcaecati porro esse tenetur labore corporis. Dolorem, cum, sed aut, porro nemo optio repellendus minima excepturi quia velit autem consectetur non. Facilis nihil explicabo, quas beatae, architecto ipsam at repellendus illum harum similique obcaecati nulla distinctio, laboriosam odit nesciunt cupiditate id aperiam est ad. Expedita accusantium, nemo iste voluptatem nam velit perspiciatis accusamus ex, reiciendis eos pariatur quae voluptatibus iure corporis beatae illo incidunt quas quam laboriosam, aliquam adipisci laborum officia consectetur. Libero voluptatum facere beatae possimus, eum impedit perspiciatis pariatur inventore aperiam corrupti, culpa quae error autem non! Cupiditate aliquid hic eius omnis nemo nobis porro officia quidem dolore quasi esse, impedit quaerat laborum velit veritatis dignissimos deleniti earum? Necessitatibus quia ipsam eos nihil illum voluptatibus totam itaque, amet reprehenderit pariatur aliquid at odit deserunt, iure esse vitae a voluptas ad, magnam cupiditate reiciendis dolorem. Ad temporibus adipisci quae architecto velit sequi iusto molestiae quos, maiores dignissimos obcaecati sunt quo voluptatibus laborum a. Impedit eum iste laborum debitis sequi veritatis ratione, laboriosam eligendi blanditiis nulla animi magnam, adipisci asperiores? Adipisci quidem modi alias iste voluptatem cum error eligendi eos ipsum eum dolorem mollitia autem obcaecati praesentium illum odit quam tenetur excepturi nemo veniam, saepe pariatur est? Doloribus beatae necessitatibus blanditiis ducimus, illum optio deleniti aliquam, similique aut amet iste tempore dolores suscipit nesciunt odio labore veritatis accusamus minima explicabo saepe perferendis? Alias exercitationem voluptatibus porro amet culpa quaerat, laboriosam minus ad quae laudantium a vero! Magnam quo distinctio autem dignissimos corporis rem labore ea, cupiditate dolore sapiente tempora, enim culpa magni recusandae voluptatem ipsum? Laboriosam est, unde exercitationem excepturi quod dolores, eaque ducimus repellat quis vel id, culpa voluptates expedita. Ut fuga expedita beatae eaque distinctio esse molestiae doloribus obcaecati sapiente id, magni at, aspernatur soluta tempora totam, dolorum eos officia ab inventore iure repellendus. Maxime praesentium vitae, hic aperiam fuga nesciunt a minima ex tenetur at non impedit cumque dolore consequuntur placeat iure provident. Sunt doloribus dignissimos animi expedita eligendi nisi repellat laborum harum distinctio cumque mollitia architecto numquam magnam officiis earum eius atque a molestiae nemo excepturi, ut, aperiam, dolorum quo! Nemo cum tenetur consectetur quod ea molestiae quisquam! Itaque accusamus expedita non. Expedita magni recusandae illo et aut fuga perspiciatis quasi optio quod voluptatem eaque dolorum deleniti ipsum, numquam aperiam corporis autem laboriosam tenetur! Laudantium quibusdam animi cupiditate tempore ducimus iure ex tenetur quis ut cum cumque eligendi nobis porro, vero at veniam a repellendus labore qui eveniet? Reiciendis nihil ratione necessitatibus voluptas. Labore earum sed nisi maxime. Doloribus nam dolores reiciendis voluptates sequi velit aliquid fuga veritatis? Amet consequatur eveniet fuga quod odit suscipit illo accusamus mollitia. Error ab est nostrum minus adipisci modi, repudiandae corrupti eaque? Maiores odit, dolores cupiditate vero obcaecati reiciendis tempora repellat pariatur alias necessitatibus id nulla nesciunt nihil non, commodi quaerat quos voluptatibus officiis inventore dolore fuga aliquam cumque laudantium? Reiciendis adipisci similique, iure quod deleniti consequuntur sapiente. Fugit, officia reiciendis? Nulla nam labore, vel eius soluta voluptatum officia facilis praesentium nemo quisquam eveniet suscipit recusandae, sed ad odit doloremque assumenda eos placeat animi dignissimos. Dolorem deleniti vitae sit ex iure inventore, maiores ab odio perferendis accusamus quod consequatur impedit voluptas temporibus eaque tenetur enim neque. Earum cumque voluptas repellendus numquam atque! Similique ut, veniam quis voluptatibus porro excepturi at eius minus quam corporis? Porro qui quam repudiandae ipsum saepe dolore at sint ab impedit, assumenda voluptatum sed consequuntur quasi odit modi aspernatur perspiciatis, quia labore pariatur vitae! Tenetur temporibus iste maiores id amet sint libero rem hic doloribus iusto nostrum perferendis, nisi ex deleniti voluptatum consequuntur, rerum excepturi dolor, asperiores explicabo officiis dolore! Nihil magni illum alias laudantium libero, nam qui cum delectus dolores debitis accusamus, obcaecati eius, commodi eos illo quo quod quas molestias odio! Consequuntur explicabo, ratione ipsam tempore, ea quod vitae voluptas maiores illum deleniti voluptate aut. Ut enim neque mollitia voluptates tempora facilis impedit tempore totam harum repellendus assumenda, fuga laborum perferendis dignissimos officiis esse quisquam qui voluptate, accusantium delectus adipisci dicta. Porro, deserunt nemo fugiat aliquid, optio reprehenderit autem saepe officia repudiandae, quasi minima laudantium doloribus? Possimus similique quae eveniet nisi consectetur quas nostrum nemo culpa fuga harum animi temporibus, consequatur reprehenderit quos corrupti reiciendis nihil alias omnis odit. Amet voluptate necessitatibus tempore ipsam voluptatem. Iusto molestiae, dolorem, autem itaque, architecto explicabo sed libero temporibus excepturi sit sequi laboriosam eum iste blanditiis earum. Deserunt minima at perferendis! Similique veritatis odio corporis nesciunt minus, impedit saepe? Ipsam ipsa doloremque facilis blanditiis esse! Iusto dolores atque eligendi nostrum blanditiis perspiciatis expedita porro laboriosam illo ex deserunt exercitationem autem nesciunt maxime voluptate aliquam eum sapiente ratione quia, consectetur libero impedit, mollitia veniam consequatur. Ipsam ab doloremque omnis vel culpa velit porro inventore maiores aliquid, architecto ea magnam nam ullam quia quas tenetur deleniti. Quisquam, nam! Earum tenetur nemo placeat eum perspiciatis numquam minima magni nisi facere, atque architecto alias, saepe cum commodi impedit cumque exercitationem delectus quis, natus dolorem quibusdam eos ducimus veniam suscipit! Culpa a similique provident voluptatibus minus animi natus aspernatur eveniet, nisi cupiditate, ullam iste cumque eos perferendis doloremque possimus corporis? Sequi repudiandae atque tempore nostrum natus. Vero accusamus quos reiciendis eaque ipsam, labore ab hic, provident maiores pariatur magnam aperiam. Obcaecati fuga, sed velit id, odit eum distinctio atque expedita blanditiis deserunt dolor odio? Temporibus deleniti placeat blanditiis vero assumenda saepe consequatur.</p> -->
+ </form>
+ <input type="text" onkeypress="onKeyPress(event)" onkeyup="handleKeyUp(event)" onkeydown="handleKeyDown(event)"
+ onchange="onChange(event)" />
+
+
+</body>
+</html>
